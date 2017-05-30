@@ -15,6 +15,7 @@ public class ReadFile
 	
 	public String[] OpenFile() throws IOException
 	{
+		//Creates new instance of File Reader
 		FileReader fr = new FileReader(path);
 		BufferedReader textReader = new BufferedReader(fr);
 		
@@ -34,14 +35,17 @@ public class ReadFile
 	{
 		FileReader file_to_read = new FileReader(path);
 		BufferedReader bf = new BufferedReader(file_to_read);
+		//Creates bf BufferedReader instance within class
 		
 		String aLine;
 		int numberOfLines = 0;
+		//Removes limit on number of lines that can be read in
 		
 		while ( ( aLine = bf.readLine( ) ) != null )
 		{
 			numberOfLines++;
 		}
+		//Closes instance bf
 		bf.close();
 		
 		return numberOfLines;

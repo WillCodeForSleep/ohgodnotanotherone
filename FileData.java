@@ -12,7 +12,7 @@ public class FileData
 		{
 			ReadFile file = new ReadFile( file_name );
 			String[ ] aryLines = file.OpenFile( );
-			
+			//Creates instance of ReadFile class
 			int i;
 			for (i=0; i < aryLines.length; i++)
 			{
