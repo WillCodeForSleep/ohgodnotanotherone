@@ -6,7 +6,8 @@ public class FileData
 {
 	public static void main(String[ ] args) throws IOException
 	{
-		String file_name = "C:/test.txt";
+		String file_name = "test.txt";
+		//String fetches file name
 		
 		try
 		{
@@ -17,11 +18,15 @@ public class FileData
 			for (i=0; i < aryLines.length; i++)
 			{
 				System.out.println (aryLines[i] );
+				//Prints out
 			}
 		}
 		catch (IOException e)
+		//Catches Java exception to prevent fail
 		{
 			System.out.println ( e.getMessage () );
+			//Prints out failure message if the program fails to read the file or if there is no file 
+			//present
 		}
 	}
 }

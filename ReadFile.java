@@ -25,6 +25,7 @@ public class ReadFile
 		int i;
 		
 		for (i=0; i < numberOfLines; i++)
+			//counts lines
 		{
 			textData[i] = textReader.readLine();
 		}
@@ -34,12 +35,14 @@ public class ReadFile
 	int readLines() throws IOException
 	{
 		FileReader file_to_read = new FileReader(path);
-		BufferedReader bf = new BufferedReader(file_to_read);
 		//Creates bf BufferedReader instance within class
+		BufferedReader bf = new BufferedReader(file_to_read);
+		
 		
 		String aLine;
-		int numberOfLines = 0;
 		//Removes limit on number of lines that can be read in
+		int numberOfLines = 0;
+		
 		
 		while ( ( aLine = bf.readLine( ) ) != null )
 		{
